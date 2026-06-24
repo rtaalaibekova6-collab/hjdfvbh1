@@ -1,0 +1,91 @@
+/* Бүткүл экранга сонун фон (background image / gradient) кошуу */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Телефондун калькуляторунун дизайны */
+.calculator {
+    background-color: #1c1c1e; /* Смартфондордун караңгы темасы сыяктуу */
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 320px;
+}
+
+/* Экран (дисплей) */
+#display {
+    width: 100%;
+    height: 80px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 40px;
+    text-align: right;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+/* Баскычтардын торчосу (Grid) */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+/* Кадимки баскычтардын стили */
+.btn {
+    height: 65px;
+    border-radius: 50%; /* Тегерек баскычтар */
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #3a3a3c;
+    color: white;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background-color: #4a4a4c;
+}
+
+/* Оператор баскычтары (+, -, *, /, =) */
+.btn.operator {
+    background-color: #ff9f0a; /* Смартфондогудай кызгылт сары түс */
+    color: white;
+}
+
+.btn.operator:hover {
+    background-color: #fca823;
+}
+
+/* Өчүрүү жана тазалоо баскычтары */
+.btn.clear, .btn.delete {
+    background-color: #a5a5a5;
+    color: black;
+}
+
+.btn.clear:hover, .btn.delete:hover {
+    background-color: #d4d4d4;
+}
+
+/* Барабар (=) баскычы */
+.btn.equal {
+    background-color: #ff9f0a;
+    grid-row: span 2; /* Бийиктигин чоңойтуу */
+    border-radius: 30px;
+    height: 142px;
+}
+
+/* Нөл баскычын тууралоо */
+.btn.zero {
+    grid-column: span 1;
+}
